@@ -4,7 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import study.responsepractice.Member.dto.MemberDto;
 import study.responsepractice.global.error.ErrorCode;
+import study.responsepractice.global.error.exception.AuthenticationNotFoundException;
 import study.responsepractice.global.error.exception.CustomException;
+import study.responsepractice.global.error.exception.MemberNotExistException;
 
 @Service
 @RequiredArgsConstructor
@@ -21,7 +23,7 @@ public class MemberService {
     // todo : unchecked exception은 controllerAdvice로 어케 못하나?
     public MemberDto.Response getMyInfo(Long memberId){
         Member foundMember = memberRepository.findById(memberId).orElseThrow(
-                ()-> new CustomException(" User Not Exist ", ErrorCode.MEMBER_NOT_EXIST)
+                ()-> new MemberNotExistException()
         );
         return new MemberDto.Response(foundMember);
     }

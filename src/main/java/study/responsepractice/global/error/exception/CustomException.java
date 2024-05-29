@@ -10,16 +10,16 @@ import java.util.List;
 @Getter
 public class CustomException extends RuntimeException {
 
-    private ErrorCode errorCode;
+    private final ErrorCode errorCode;
     private List<ErrorResponse.FieldError> errors = new ArrayList<>();
-
-    public CustomException(String message, ErrorCode errorCode) {
-        super(message);
-        this.errorCode = errorCode;
-    }
 
     public CustomException(ErrorCode errorCode) {
         super(errorCode.getMessage());
+        this.errorCode = errorCode;
+    }
+
+    public CustomException(String message, ErrorCode errorCode) {
+        super(message);
         this.errorCode = errorCode;
     }
 

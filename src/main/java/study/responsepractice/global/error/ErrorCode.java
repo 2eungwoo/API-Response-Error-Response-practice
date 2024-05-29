@@ -19,11 +19,14 @@ public enum ErrorCode {
     USER_EMAIL_ALREADY_EXISTS(400, "M002", "user email already exists"),
     NO_AUTHORITY(403, "M003", "no authority"),
     NEED_LOGIN(401, "M004", "need login"),
-    AUTHENTICATION_NOT_FOUND(401, "M005", "Security Context에 인증 정보가 없습니다."),
+    AUTHENTICATION_NOT_FOUND(401, "M005", "no authenticated data in security context "),
     MEMBER_ALREADY_LOGOUT(400, "M006", "member already logout"),
 
     // Auth
-    REFRESH_TOKEN_INVALID(400, "A001", "refresh token invalid");
+    REFRESH_TOKEN_INVALID(400, "A001", "refresh token invalid"),
+
+    // 근데
+    BUT_I_THINK(999,"HMM","이렇게 클래스파일이 너무 많아지는건 문제가 되지 않는가?");
 
     private final int status;
     private final String code;
