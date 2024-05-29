@@ -21,7 +21,7 @@ public class MemberService {
     // todo : unchecked exception은 controllerAdvice로 어케 못하나?
     public MemberDto.Response getMyInfo(Long memberId){
         Member foundMember = memberRepository.findById(memberId).orElseThrow(
-                ()-> new CustomException(" 메세지", ErrorCode.MEMBER_NOT_EXIST)
+                ()-> new CustomException(" User Not Exist ", ErrorCode.MEMBER_NOT_EXIST)
         );
         return new MemberDto.Response(foundMember);
     }
