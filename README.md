@@ -285,13 +285,13 @@ public class CustomException extends RuntimeException {
 
 `RuntimeException`을 상속받는 `CustomException`을 정의해두어 다양한 Exception들에 대해 구체적으로 정의하고 사용할 수 있다.
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ec9dc597-c5ff-4710-a63e-9af745651655/7633bd81-7209-4c8c-a48a-a24e11309395/Untitled.png)
+<img width="289" alt="image" src="https://github.com/breadman98/API-Response-Error-Response-practice/assets/89715722/551781d4-e3e9-472e-9964-59c247c04395">
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ec9dc597-c5ff-4710-a63e-9af745651655/f9ca8df4-8571-46fb-960b-d976d59e68da/Untitled.png)
 
 `CustomException`을 상속받는 구체적인 Exception들은 도메인 내에서 예외가 발생할만한 부분마다 디테일하게 처리 가능하나, 케이스마다 직접 정의해주어야 하므로 클래스가 많아진다는 단점이 있다.
 
 다음과 같이 구체적인 Exception들을 정의하여 사용하면 된다.
+<img width="862" alt="image" src="https://github.com/breadman98/API-Response-Error-Response-practice/assets/89715722/da8d1267-5be0-4c52-a60b-ca56cbb5f698">
 
 ### MemberNotExistExecption.class
 
