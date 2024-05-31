@@ -13,7 +13,8 @@ api 요청 응답 시 일관성 있는 `response body`를 얻기 위한 작업
 
 ## PACKAGE STRUCTURE
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/ec9dc597-c5ff-4710-a63e-9af745651655/745e1f90-7a67-4d3a-a472-d168fd02cf53/Untitled.png)
+<img width="435" alt="image" src="https://github.com/breadman98/API-Response-Error-Response-practice/assets/89715722/6eeb1998-1139-4630-bd99-8c88c0a4ae23">
+
 
 ## GLOBAL EXCEPTION HANDLING
 
