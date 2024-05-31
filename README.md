@@ -156,7 +156,7 @@ public class ErrorResponse {
 
 이 메소드들은 다음과 같이 여러 에러 상황에 대응할 수 있다.
 
-- javax.validation의 @Valid 나 @Validated를 통해 유효성 검증에서 걸린 Binding Error 처리
+- javax.validation의 `@Valid` 나 `@Validated`를 통해 유효성 검증에서 걸린 `Binding Error` 처리
 - 데이터 유효성 검사 실패 시 발생하는 예외에서 실패 정보를 담고 있는  `ConstraintViolation` 처리
 - 프로그래머가 일반적으로 사용하기 위해 만드는 `CustomError` 에 대한 처리
 
@@ -251,7 +251,7 @@ public class GlobalExceptionHandler {
 }
 ```
 
-Spring에서 제공하는 `@RestControllerAdvice``, `@ExceptionHandler`를 사용하여 전역으로 에러처리를 하도록 해준다. 
+Spring에서 제공하는 `@RestControllerAdvice`, `@ExceptionHandler`를 사용하여 전역으로 에러처리를 하도록 해준다. 
 
 @ControllerAdvice는 `@ExceptionHandler`, `@ModelAttribute`, `@InitBinder`가 적용된 메소드들을 AOP를 적용해 컨트롤러 단에 적용하기 위해 고안된 어노테이션이다.
 
