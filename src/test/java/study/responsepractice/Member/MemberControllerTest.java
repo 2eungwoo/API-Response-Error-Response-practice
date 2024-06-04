@@ -139,6 +139,7 @@ class MemberControllerTest {
 
         // then
         result
+                .andExpect(status().isBadRequest())
                 .andExpect(jsonPath("$.status").value(400))
                 .andExpect(jsonPath("$.code").value("C002"))
                 .andDo(print());

@@ -10,6 +10,8 @@ import org.mockito.junit.jupiter.MockitoExtension;
 
 import study.responsepractice.Member.dto.MemberDto;
 import study.responsepractice.global.error.exception.CustomException;
+import study.responsepractice.global.error.exception.MemberNotExistException;
+import study.responsepractice.global.error.exception.NeedLoginException;
 
 
 import java.util.Optional;
@@ -38,7 +40,7 @@ class MemberServiceTest {
 
         // then
         // `memberService.getMyInfo(fakeMemberId)` 호출 시 `CustomException`이 발생하는지 검증
-        assertThrows(CustomException.class, () -> memberService.getMyInfo(fakeMemberId));
+        assertThrows(MemberNotExistException.class, () -> memberService.getMyInfo(fakeMemberId));
     }
 
 }
