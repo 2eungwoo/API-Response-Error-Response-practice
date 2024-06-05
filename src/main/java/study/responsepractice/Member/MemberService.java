@@ -20,7 +20,7 @@ public class MemberService {
             return new MemberDto.Response(savedMember);
     }
 
-    // todo : unchecked exception은 controllerAdvice로 어케 못하나?
+    // todo : checked exception
     public MemberDto.Response getMyInfo(Long memberId){
         Member foundMember = memberRepository.findById(memberId).orElseThrow(
                 ()-> new MemberNotExistException()
